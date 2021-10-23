@@ -17,6 +17,6 @@ function calculatePages(request, response, next) {
 }
 exports.default = {
     getPagination,
-    calculatePages
+    calculatePages,
 };
 //# sourceMappingURL=pagination.js.map

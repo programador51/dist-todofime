@@ -13,15 +13,15 @@ const GetTasks = async (req, res) => {
             data: {
                 tasks,
                 pages,
-                actualPage: +(req.query.pagina || 1)
-            }
+                actualPage: +(req.query.pagina || 1),
+            },
         });
     }
     catch (error) {
         console.log(error);
         return res.status(200).json({
             status: 500,
-            error
+            error,
         });
     }
 };
@@ -31,7 +31,7 @@ const AddTask = async (req, res) => {
         await toDo_1.default.AddTask(idUser, task);
         return res.status(200).json({
             status: 200,
-            message: 'Tarea agregada'
+            message: 'Tarea agregada',
         });
     }
     catch (error) {
@@ -39,7 +39,7 @@ const AddTask = async (req, res) => {
         return res.status(200).json({
             status: 500,
             error,
-            message: 'Error'
+            message: 'Error',
         });
     }
 };
@@ -49,7 +49,7 @@ const DeleteTask = async (req, res) => {
         await toDo_1.default.DeleteTask(idTask);
         return res.status(200).json({
             status: 200,
-            message: 'Tarea borrada'
+            message: 'Tarea borrada',
         });
     }
     catch (error) {
@@ -57,7 +57,7 @@ const DeleteTask = async (req, res) => {
         return res.status(200).json({
             status: 500,
             error,
-            message: 'Error'
+            message: 'Error',
         });
     }
 };
@@ -67,7 +67,7 @@ const UpdateCheckToDo = async (req, res) => {
         await toDo_1.default.ToggleDone(idTask, status);
         return res.status(200).json({
             status: 200,
-            message: 'Tarea marcada'
+            message: 'Tarea marcada',
         });
     }
     catch (error) {
@@ -75,7 +75,7 @@ const UpdateCheckToDo = async (req, res) => {
         return res.status(200).json({
             status: 500,
             error,
-            message: 'Error'
+            message: 'Error',
         });
     }
 };
@@ -86,7 +86,7 @@ const UpdateTask = async (req, res) => {
         await toDo_1.default.UpdateTask(idTask, content);
         return res.status(200).json({
             status: 200,
-            message: 'Tare actualizada'
+            message: 'Tare actualizada',
         });
     }
     catch (error) {
@@ -94,7 +94,7 @@ const UpdateTask = async (req, res) => {
         return res.status(200).json({
             status: 500,
             error,
-            message: 'Error'
+            message: 'Error',
         });
     }
 };
@@ -103,6 +103,6 @@ exports.default = {
     AddTask,
     UpdateCheckToDo,
     DeleteTask,
-    UpdateTask
+    UpdateTask,
 };
 //# sourceMappingURL=toDo.js.map

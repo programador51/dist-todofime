@@ -86,7 +86,7 @@ const GetNoTasks = (req, res, next) => {
             console.log(error);
             return res.status(200).json({
                 status: 500,
-                error
+                error,
             });
         }
         req.body.recordsets = result[0]['noTasks'];
@@ -110,6 +110,6 @@ exports.default = {
     DeleteTask,
     ToggleDone,
     UpdateTask,
-    GetNoTasks
+    GetNoTasks,
 };
 //# sourceMappingURL=toDo.js.map
