@@ -13,7 +13,7 @@
         "clean": "rimraf dist",
         "build": "run-s prettify clean transpile",
         "watch": "tsc --watch",
-        "start": "yarn prettify & transpile & nodemon",
+        "start": "node src/index.js",
         "service:start": "pm2 start ecosystem.config.js",
         "service:reload": "pm2 reload ecosystem.config.js",
         "service:startup": "pm2 startup",
