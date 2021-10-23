@@ -21,11 +21,9 @@
         "service:list": "pm2 list ecosystem.config.js",
         "service:delete": "pm2 delete ecosystem.config.js",
         "service:logs": "pm2 logs"
-        
     },
     "lint-staged": {
         "*.{ts,js}": [
-            
             "tslint --fix -c tslint.json 'src/**/*.{ts,js}'; exit 0",
             "git add"
         ]

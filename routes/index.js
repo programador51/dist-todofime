@@ -21,7 +21,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const homeController = __importStar(require("@/controller/home"));
 const express_1 = require("express");
-const router = (0, express_1.Router)();
+const router = express_1.Router();
 router.get('/', homeController.getAppInfo);
 exports.default = router;
 //# sourceMappingURL=index.js.map

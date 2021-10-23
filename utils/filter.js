@@ -12,7 +12,7 @@ const emptyToNull = (obj) => {
     for (const key of Object.keys(obj)) {
         const value = obj[key];
         if (typeof value === 'object') {
-            result[key] = (0, exports.emptyToNull)(value);
+            result[key] = exports.emptyToNull(value);
         }
         else {
             result[key] = nullIfEmpty(value);

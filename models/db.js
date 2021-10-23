@@ -4,7 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mysql_1 = __importDefault(require("mysql"));
-const connection = mysql_1.default.createConnection('mysql://uoyhj7ltnfmdggnw:3Esx747eWUr965u5Qmbu@bxmhvlovhfcqp18uinjs-mysql.services.clever-cloud.com:3306/bxmhvlovhfcqp18uinjs');
+const connection = mysql_1.default.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'jl1731168',
+    database: 'todofime',
+});
 connection.connect((e) => {
     if (e) {
         console.log(`■ There was an error connecting to DB ${e}`);
