@@ -20,12 +20,12 @@
         "service:stop": "pm2 stop ecosystem.config.js",
         "service:list": "pm2 list ecosystem.config.js",
         "service:delete": "pm2 delete ecosystem.config.js",
-        "service:logs": "pm2 logs",
-        "prettify": "prettier --single-quote --write \"src/**/*.{ts,js,json}\""
+        "service:logs": "pm2 logs"
+        
     },
     "lint-staged": {
         "*.{ts,js}": [
-            "prettier --single-quote --write",
+            
             "tslint --fix -c tslint.json 'src/**/*.{ts,js}'; exit 0",
             "git add"
         ]
